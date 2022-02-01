@@ -10,6 +10,10 @@
     border-top-right-radius: 5px ;
 }
 
+.links:hover .figcaption{
+    color: black;
+}
+
 .padre{
     padding-top: 20px;
     padding-left: 10%;
@@ -31,20 +35,28 @@
     text-decoration: none;
     color: black;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.35s;
+    transition: color 0s ease;
     background-color: whitesmoke;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 .links:hover{
     transform: translateY(-15px);
+    transition: all 0.35s;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+.links:not(:hover){
+  transform: translateY(0px);
+  transition: all 0.35s;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .title{
     text-align:center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
+    box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* FOOTER */
@@ -101,25 +113,28 @@
     width: 50px;
     text-align: center;
     text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   
   /* Add a hover effect if you want */
   .fa:hover {
-    opacity: 0.7;
+    transform: scale(1.2);
+    color: white !important;
   }
   
   /* Set a specific color for each brand */
   
   /* Facebook */
   .fa-facebook {
-    background: #3B5998;
+    background: #2759c7;
     color: white;
     border-radius:50%
   }
   
   /* Twitter */
   .fa-twitter {
-    background: #55ACEE;
+    background: #419ee6;
     color: white;
     border-radius:50%
   }
@@ -131,7 +146,7 @@
   }
 
   .fa-instagram {
-    background: #125688;
+    background: #7d49cf;
     color: white;
     border-radius:50%;
   }
