@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router , Routes } from "react-router-dom";
+import Barcelona from './components/Barcelona';
+import London from './components/London';
+import Paris from './components/Paris';
+import Rome from './components/Rome';
+import Athens from './components/Athens';
+import Berlin from './components/Berlin';
+import Amsterdam from './components/Amsterdam';
+import Navegacion from './components/Navegacion';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='title'>
+        <h1>Europe destinations</h1>
+      </div>
+      <div className='nav'>
+
+        {/* Esta seccion de codigos no se que hace. Puede no estar y sigue siendo lo mismo. Falta la imagen principal, el curso debe estar desactualizado */}
+        <Routes exact path='/Barcelona' element={Barcelona}/>
+        <Routes path="/London" element={London}/>
+        <Routes path="/Paris" element={Paris}/>
+        <Routes path="/Roma" element={Rome}/>
+        <Routes path="/Athens" element={Athens}/>
+        <Routes path="/Berlin" element={Berlin}/>
+        <Routes path="/Amsterdam" element={Amsterdam}/>
+
+        <Navegacion/>
+      </div>
+    </Router>
   );
 }
 
